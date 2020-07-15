@@ -17,6 +17,11 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        // selected option color
+        defaultTipControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: "57cdfe".color], for: .selected)
+
+        // color of other options
+        defaultTipControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: "004380".color], for: .normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
