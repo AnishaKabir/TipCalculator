@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController {
 
@@ -16,10 +17,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipControl: UISegmentedControl!
     
     let defaults = UserDefaults.standard
+    let fmt = NumberFormatter()
+    
+    var currencySymbol = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
+        // selected option color
+        tipControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.green], for: .selected)
+
+        // color of other options
+        tipControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
+        currencySymbol = fmt.currencySymbol
+        print(currencySymbol)
+        billField.placeholder = currencySymbol
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,6 +40,11 @@ class ViewController: UIViewController {
         //print("view will appear")
         // This is a good place to retrieve the default tip percentage from UserDefaults
         // and use it to update the tip amount
+        
+        currencySymbol = fmt.currencySymbol
+        if billField.text == "" {
+            billField.becomeFirstResponder()
+        }
         
         tipControl.selectedSegmentIndex = defaults.integer(forKey: "defaultTip")
         
