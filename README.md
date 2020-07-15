@@ -1,5 +1,5 @@
 # TipCalculator
-A simple tip calculator app for iOS.
+A simple tip calculator app for iOS submitted as the pre-work for CodePath.
 
 Submitted by: Anisha Kabir
 
@@ -25,6 +25,6 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/MjxoQPk2XQ.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
