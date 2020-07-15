@@ -28,6 +28,8 @@ class ViewController: UIViewController {
         // This is a good place to retrieve the default tip percentage from UserDefaults
         // and use it to update the tip amount
         
+        tipControl.selectedSegmentIndex = defaults.integer(forKey: "defaultTip")
+        
         let bill =  Double(billField.text!) ?? 0
         let tipPercentages = [0.15, 0.18, 0.2]
         
